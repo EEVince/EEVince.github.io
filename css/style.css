@@ -1,0 +1,131 @@
+body
+{
+    margin: 0;
+    background-color: #16161D;
+    background-image: url(../img/gifs/tile.gif);
+    background-repeat: repeat;
+}
+
+.welcome
+{
+    border-style: outset;
+    border-color: #23ABBB;
+    border-width: 7px;
+    padding:15px;
+    margin: 30px;
+    width:500px;
+}
+
+.flex-content
+{
+    display: flex;
+    margin-top:2%;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 75%;
+    justify-content:center;
+}
+.main-content
+{
+    background-color: #E9E9E2;
+    border-style:outset;
+    border-width: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.website-intro h1, h2
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.leftbar
+{
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.leftbar li
+{
+    background-color: #E2E2E2;
+    border-style:outset;
+    border-width: 3px;
+    margin-top: 7px;
+    margin: 7px 7px 0px 7px;
+    padding-right: 8px;
+    text-align: right;
+
+}
+
+.leftbar .bullet-point
+{
+    padding-left: 15px;
+    float:left;
+}
+
+.leftbar a, .rightbar a
+{
+    text-decoration:none;
+    color: #000;
+}
+
+ul
+{
+    display:inline-block;
+    list-style: none;
+    list-style-position: inside;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 162px;
+}
+
+li:hover
+{
+    background-color: #C2C2C2;
+}
+
+.rightbar, .leftbar
+{
+    background-color: #E9E9E2;
+    border-style:outset;
+    border-width: 5px;
+    min-width: 160px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.wip img
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.wip
+{
+    display: flex;
+    justify-content: center;
+    max-height: 64px;
+    max-width: 725px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo
+{
+    display:block;
+    width: 25%;
+    margin: 0;
+}
+.header
+{
+    background-image: url("../img/jpgs/tile-logo.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    padding:0;
+}
