@@ -153,7 +153,26 @@ li:hover
     margin-right: auto;
 
 }
+#languages
+{
+	border-style: inset;
+	border-spacing: 0;
+}
 
+#languages td
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #1d1d16;
+	padding-inline: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#fieldname td
+{
+	border-bottom-width: 3px;
+}
 .post-preview embed
 {
 	border-style: inset;
