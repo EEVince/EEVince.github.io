@@ -1,0 +1,8 @@
+@import url("blogpost-style.css");
+
+.main-txt, body, p,hr
+{
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis;
+}
