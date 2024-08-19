@@ -64,6 +64,15 @@ body
     text-align: right;
 }
 
+.navactive
+{
+	background-color: #cacaca !important;
+    border-style:outset;
+    border-width: 3px;
+    margin: 7px 7px 0px 7px;
+    padding-right: 8px;
+    text-align: right;
+}
 .leftbar .bullet-point
 {
     padding-left: 15px;
@@ -91,6 +100,11 @@ ul
 li:hover
 {
     background-color: #C2C2C2;
+}
+
+.navactive:hover
+{
+	background-color: #B9B9B9 !important;
 }
 
 .rightbar, .leftbar
