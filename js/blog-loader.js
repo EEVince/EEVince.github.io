@@ -24,7 +24,7 @@ function stylePost(srcData)
 		const mainTxt = doc.getElementById("txt-body");
 		mainTxt.setAttribute("style", styleInject);
 		console.log(mainTxt.getAttribute("style"));
-		return doc.documentElement.innerHTML; //convert back to html
+		return doc.body.innerHTML;
 	});
 }
 loadIntoEmbed();
