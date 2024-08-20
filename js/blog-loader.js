@@ -8,11 +8,11 @@ function generatePostEmbed()
 {
 	emb = document.createElement("embed");
 	const srcData = sessionStorage.getItem("post-src");
+	stylePost(srcData); //change style tag!
 	emb.setAttribute("src", srcData);
 	console.log(srcData + "\t attr:" + emb.getAttribute("src"));
 	mainDiv = document.getElementsByClassName("main-content")[0];
-	mainDiv.appendChild(emb);
-	stylePost(srcData);
+	mainDiv.appendChild(emb); //add embed tag and so, DOM.
 }
 function stylePost(srcData)
 {
