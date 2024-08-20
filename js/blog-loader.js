@@ -8,7 +8,7 @@ function generatePostEmbed()
 {
 	emb = document.createElement("embed");
 	const srcData = sessionStorage.getItem("post-src");
-	const postTxt = await stylePost(srcData);//change style!
+	const postTxt = stylePost(srcData);//change style!
 	console.log(postTxt); 
 	mainDiv = document.getElementsByClassName("main-content")[0];
 	mainDiv.innerHTML = postTxt;
