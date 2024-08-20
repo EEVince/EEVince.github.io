@@ -2,12 +2,12 @@ console.log("Hi!");
 function loadIntoEmbed()
 {
 	const srcData = "posts/" + window.location.hash.slice(1) + ".html";
-	localStorage.setItem("post-src", srcData);
+	sessionStorage.setItem("post-src", srcData);
 }
 function generatePostEmbed()
 {
 	emb = document.createElement("embed");
-	const srcData = localStorage.getItem("post-src");
+	const srcData = sessionStorage.getItem("post-src");
 	emb.setAttribute("src", srcData);
 	console.log(srcData + "\t attr:" + emb.getAttribute("src"));
 	stylePost(srcData);
@@ -20,14 +20,13 @@ function stylePost(srcData)
 	fetch(srcData)
     .then(response => response.text())
     .then(html => {
-        // Create a new DOM parser
         let parser = new DOMParser();
-        
-        // Parse the text into a Document
         let doc = parser.parseFromString(html, 'text/html');
-        
-        // Now you can manipulate the `doc` as a DOM object
-        console.log(doc);
+        // doc style code
+		const styleInject = "clear:both; overflow: hidden; text-overflow: ellipsis; white-space:nowrap;";
+		const mainTxt = doc.getElementById("txt-body");
+		mainTxt.setAttribute("style", styleInject);
+		console.log(mainTxt.getAttribute("style"));
 	});
 }
 loadIntoEmbed();
