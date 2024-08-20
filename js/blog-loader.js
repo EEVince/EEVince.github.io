@@ -23,7 +23,7 @@ function stylePost(srcData)
         let parser = new DOMParser();
         let doc = parser.parseFromString(html, 'text/html');
         // doc style code
-		const styleInject = "clear:both; overflow: hidden; text-overflow: ellipsis; white-space:nowrap;";
+		const styleInject = "clear:both; overflow: initial; text-overflow: initial; white-space:initial;";
 		const mainTxt = doc.getElementById("txt-body");
 		mainTxt.setAttribute("style", styleInject);
 		console.log(mainTxt.getAttribute("style"));
