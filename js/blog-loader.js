@@ -8,10 +8,10 @@ function generatePostEmbed()
 {
 	emb = document.createElement("embed");
 	const srcData = sessionStorage.getItem("post-src");
-	var postTxt = stylePost(srcData);//change style!
+	const postTxt = stylePost(srcData);//change style!
 	console.log(postTxt); 
 	mainDiv = document.getElementsByClassName("main-content")[0];
-	mainDiv.innerHTML = postTxt.body;
+	mainDiv.innerHTML = postTxt;
 }
 function stylePost(srcData)
 {
@@ -20,8 +20,7 @@ function stylePost(srcData)
     .then(html => {
         let parser = new DOMParser();
         let doc = parser.parseFromString(html, 'text/html');
-        // doc style code
-		const styleInject = "clear:both;";
+		const styleInject = "clear:both;"; // doc style code
 		const mainTxt = doc.getElementById("txt-body");
 		mainTxt.setAttribute("style", styleInject);
 		console.log(mainTxt.getAttribute("style"));
