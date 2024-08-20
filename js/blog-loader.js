@@ -2,26 +2,33 @@ console.log("Hi!");
 function loadIntoEmbed()
 {
 	const srcData = "posts/" + window.location.hash.slice(1) + ".html";
-	console.log(srcData);
-	document.getElementsByTagName("IFRAME")[0].setAttribute("src", srcData);
+	localStorage.setItem("post-src", srcData);
 }
-
-function appendStyle()
+function generatePostEmbed()
 {
-	var emb = document.getElementsByTagName("iframe")[0];
-	var embedDoc = emb.contentDocument;
-	// create a new div element
-    const newStyle = embedDoc.createElement("style");
-
-    // and give it some content
-    const newContent = embedDoc.createTextNode("white-space: initial; overflow: initial; text-overflow: initial;");
-
-    // add the text node to the newly created div
-    newStyle.appendChild(newContent);
-
-    // add the newly created element and its content into the DOM
-    embedDoc.head.appendChild(newStyle);
-	console.log("stylish!");
+	emb = document.createElement("embed");
+	const srcData = localStorage.getItem("post-src");
+	emb.setAttribute("src", srcData);
+	console.log(srcData + "\t attr:" + emb.getAttribute("src"));
+	stylePost(srcData);
+	
+	mainDiv = document.getElementsByClassName("main-content")[0];
+	mainDiv.appendChild(emb);
+}
+function stylePost(srcData)
+{
+	fetch('path/to/your/file.html')
+    .then(response => response.text())
+    .then(html => {
+        // Create a new DOM parser
+        let parser = new DOMParser();
+        
+        // Parse the text into a Document
+        let doc = parser.parseFromString(html, 'text/html');
+        
+        // Now you can manipulate the `doc` as a DOM object
+        console.log(doc);
+	});
 }
 loadIntoEmbed();
-appendStyle();
+generatePostEmbed();
