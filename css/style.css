@@ -157,7 +157,7 @@ li:hover{
 .post-preview{
 	max-height: 44em;
 	max-width: 100%;
-	overflow-y: auto;
+	overflow-y: hidden;
 }
 .blog-post{
 	border-style: inset;
@@ -177,6 +177,7 @@ li:hover{
 {
 	text-decoration: none;
 	color: #000;
+	width: 96%;
 }
 
 .blog-posts{
@@ -227,4 +228,36 @@ hr{
 {
 	width: 97%;
 	min-height: 100%;
+}
+
+#projects
+{
+	width: 70vw;
+}
+
+#projects-table
+{
+	width: 100%;
+	height: 6em;
+}
+
+#projects-table td
+{
+	border-style: inset;
+	padding: 10px;
+}
+
+#blog-body
+{
+	width: 70vw;
+}
+
+#projects .thumbnail
+{
+	max-height: 10em;
+}
+
+#musiclist li
+{
+	margin-left: 1em;
 }
