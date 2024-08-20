@@ -10,10 +10,9 @@ function generatePostEmbed()
 	const srcData = sessionStorage.getItem("post-src");
 	emb.setAttribute("src", srcData);
 	console.log(srcData + "\t attr:" + emb.getAttribute("src"));
-	stylePost(srcData);
-	
 	mainDiv = document.getElementsByClassName("main-content")[0];
 	mainDiv.appendChild(emb);
+	stylePost(srcData);
 }
 function stylePost(srcData)
 {
