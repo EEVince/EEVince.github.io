@@ -17,7 +17,7 @@ function generatePostEmbed()
 }
 function stylePost(srcData)
 {
-	fetch('path/to/your/file.html')
+	fetch(srcData);
     .then(response => response.text())
     .then(html => {
         // Create a new DOM parser
