@@ -9,9 +9,10 @@ function generatePostEmbed()
 	emb = document.createElement("embed");
 	const srcData = sessionStorage.getItem("post-src");
 	const postTxt = stylePost(srcData);//change style!
+	postTxt.then() = {
 	console.log(postTxt); 
 	mainDiv = document.getElementsByClassName("main-content")[0];
-	mainDiv.innerHTML = postTxt;
+	mainDiv.innerHTML = postTxt; };
 }
 async function stylePost(srcData) {
     const response = await fetch(srcData);
