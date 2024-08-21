@@ -10,7 +10,7 @@ body{
 	border-width: 7px;
 	padding:15px;
 	margin: 30px;
-	width:500px;
+	width:66%;
 }
 .flex-content{
 	display: flex;
@@ -255,6 +255,22 @@ hr{
 #projects .thumbnail
 {
 	max-height: 10em;
+}
+
+.retronaut a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.retronaut
+{
+	text-align: center;
+}
+
+.retronaut td
+{
+	width: 100px;
 }
 
 #musiclist li
