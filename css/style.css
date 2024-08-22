@@ -67,6 +67,18 @@ body{
 	text-decoration:none;
 	color: #000;
 }
+
+.marqflex
+{
+	display: flex;
+	flex-direction:column;
+	height:fit-contents;
+	width: 66%;
+	gap: 5px;
+	margin-inline: auto;
+}
+
+
 ul{
 	display:inline-block;
 	list-style: none;
@@ -124,6 +136,16 @@ li:hover{
 .sticker-aggregator a{
 	margin-bottom: -3px;
 }
+.rightbar .marquee
+{
+	height:200px;
+	width: 100%;
+}
+.marquee img
+{
+	width:100%;
+}
+
 .wip img{
 	width: 100%;
 	margin-left: auto;
