@@ -68,16 +68,42 @@ body{
 	color: #000;
 }
 
-.marqflex
+
+.rightbar .marquee 
 {
-	display: flex;
-	flex-direction:column;
-	height:fit-contents;
-	width: 66%;
-	gap: 5px;
-	margin-inline: auto;
+    overflow: hidden;
+    position: relative;
 }
 
+.marqflex
+{
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    animation: scroll 5s linear infinite;
+	animation-play-state: running;
+}
+
+.marqflex img
+{
+	width: 66%;
+	margin-top: 5px;
+    height: auto;
+}
+
+.marqflex:hover
+{
+	animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
 
 ul{
 	display:inline-block;
@@ -139,7 +165,7 @@ li:hover{
 .rightbar .marquee
 {
 	height:200px;
-	width: 100%;
+	width: 66%;
 }
 .marquee img
 {
