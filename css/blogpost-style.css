@@ -1,0 +1,10 @@
+.main-txt, body, p, hr
+{
+	clear:both;
+}
+*
+{
+	overflow: inherit;
+    text-overflow: inherit;
+    white-space: inherit;
+} 
